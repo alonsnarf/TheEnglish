@@ -25,7 +25,7 @@
       android:screenOrientation="landscape">
     </activity>
     <activity
-      android:name=".activity.SplashActivity"
+      android:name=".activity.SplashActivity_"
       android:label="@string/title_activity_splash"
       android:configChanges="keyboardHidden|orientation"
       android:screenOrientation="landscape">
@@ -36,13 +36,13 @@
       </intent-filter>
     </activity>
     <activity
-      android:name=".activity.MainActivity"
+      android:name=".activity.MainActivity_"
       android:label="@string/title_activity_main"
       android:configChanges="keyboardHidden|orientation"
       android:screenOrientation="landscape">
     </activity>
     <activity
-      android:name=".activity.SettingActivity"
+      android:name=".activity.SettingActivity_"
       android:label="@string/title_activity_setting"
       android:configChanges="keyboardHidden|orientation"
       android:screenOrientation="landscape">

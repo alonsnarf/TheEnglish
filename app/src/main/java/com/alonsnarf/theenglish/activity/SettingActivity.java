@@ -9,21 +9,27 @@ import com.alonsnarf.theenglish.R;
 import com.alonsnarf.theenglish.object.Setting;
 import com.alonsnarf.theenglish.service.SettingService;
 
+import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Fullscreen;
+import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.WindowFeature;
+
+import static android.view.Window.FEATURE_INDETERMINATE_PROGRESS;
+import static android.view.Window.FEATURE_NO_TITLE;
+
+@Fullscreen
+@EActivity(R.layout.activity_setting)
+@WindowFeature({FEATURE_NO_TITLE, FEATURE_INDETERMINATE_PROGRESS })
 public class SettingActivity extends Activity
 {
-  private TextView email;
-  private Spinner mainWord;
-  private Spinner time;
+  @ViewById
+  TextView accountEmail;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState)
-  {
-    super.onCreate(savedInstanceState);
-    ActivityUtils.runActivity(this, R.layout.activity_setting);
-    email = (TextView) findViewById(R.id.account_email);
-//    mainWord = (Spinner) findViewById(R.id.spinner_main_word);
-    time = (Spinner) findViewById(R.id.spinner_time);
-  }
+//  @ViewById
+//  Spinner spinnerMainWord;
+
+  @ViewById
+  Spinner spinnerTime;
 
   @Override
   protected void onStart()
@@ -31,9 +37,9 @@ public class SettingActivity extends Activity
     super.onStart();
     SettingService settingService = SettingService.getSettingService(this);
     Setting setting = settingService.getSetting();
-    email.setText(setting.getEmail());
+    accountEmail.setText(setting.getEmail());
 //    mainWord.setSelection(setting.getMainWord());
-    time.setSelection(setting.getTime());
+    spinnerTime.setSelection(setting.getTime());
   }
 
   @Override
@@ -42,9 +48,9 @@ public class SettingActivity extends Activity
     super.onPause();
     SettingService settingService = SettingService.getSettingService(this);
     Setting setting = new Setting();
-    setting.setEmail(email.getText().toString());
+    setting.setEmail(accountEmail.getText().toString());
 //    setting.setMainWord(mainWord.getSelectedItemPosition());
-    setting.setTime(time.getSelectedItemPosition());
+    setting.setTime(spinnerTime.getSelectedItemPosition());
     settingService.updateSetting(setting);
   }
 }
