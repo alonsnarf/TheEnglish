@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="language_prompt">Choose a main word</string>
+  <string-array name="language_arrays">
+    <item>English</item>
+    <item>Ukrainian</item>
+  </string-array>
+
+  <string name="time_prompt">Choose time</string>
+  <string-array name="time_arrays">
+    <item>2</item>
+    <item>5</item>
+    <item>10</item>
+  </string-array>
+</resources>

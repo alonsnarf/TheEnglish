@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">The English</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+  <string name="app_name">The english</string>
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Settings</string>
+  <string name="title_activity_finish_dialog">FinishDialogActivity</string>
+  <string name="title_activity_splash">The English</string>
+  <string name="title_activity_main">MainActivity</string>
+  <string name="title_activity_setting">SettingActivity</string>
+  <string name="splash_image_description">database sync</string>
+  <string name="begin">Begin</string>
+  <string name="setting">Setting</string>
+  <string name="default_score">0</string>
+  <string name="try_again">Try again</string>
+  <string name="exit">Exit</string>
+  <string name="label_name">Name</string>
+  <string name="label_main_word">Main word</string>
+  <string name="email">Email</string>
+  <string name="game_time">Game time</string>
 
 </resources>

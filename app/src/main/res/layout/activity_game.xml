@@ -1,0 +1,77 @@
+<RelativeLayout
+  android:id="@+id/main_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/english"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:textSize="40sp"/>
+
+
+  <LinearLayout
+    android:id="@+id/score_time"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/english"
+    android:orientation="horizontal">
+
+    <TextView
+      android:id="@+id/score"
+      style="@android:style/TextAppearance.Large"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="40sp"/>
+
+    <TextView
+      android:id="@+id/time"
+      style="@android:style/TextAppearance.Large"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:textSize="40sp"/>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/score_time"
+    android:orientation="vertical">
+
+    <Button
+      android:id="@+id/ukrainian1"
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:textSize="40sp"
+      android:background="@drawable/blue_button"/>
+
+    <Button
+      android:id="@+id/ukrainian2"
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:textSize="40sp"
+      android:background="@drawable/blue_button"/>
+
+    <Button
+      android:id="@+id/ukrainian3"
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:textSize="40sp"
+      android:background="@drawable/blue_button"/>
+
+    <Button
+      android:id="@+id/ukrainian4"
+      android:layout_width="fill_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:textSize="40sp"
+      android:background="@drawable/blue_button"/>
+  </LinearLayout>
+</RelativeLayout>
