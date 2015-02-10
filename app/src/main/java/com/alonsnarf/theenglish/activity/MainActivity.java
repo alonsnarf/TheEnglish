@@ -17,7 +17,7 @@ import static android.view.Window.FEATURE_NO_TITLE;
 
 @Fullscreen
 @EActivity(R.layout.activity_main)
-@WindowFeature({FEATURE_NO_TITLE, FEATURE_INDETERMINATE_PROGRESS })
+@WindowFeature({FEATURE_NO_TITLE, FEATURE_INDETERMINATE_PROGRESS})
 public class MainActivity extends Activity
 {
   @ViewById
@@ -27,12 +27,14 @@ public class MainActivity extends Activity
   Button setting;
 
   @Click
-  public void begin(){
-    startActivity(new Intent(this, GameActivity.class));
+  public void begin()
+  {
+    startActivity(new Intent(this, GameActivity_.class));
   }
 
   @Click
-  public void setting(){
+  public void setting()
+  {
     startActivity(new Intent(this, SettingActivity_.class));
   }
 }
